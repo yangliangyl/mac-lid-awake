@@ -1,4 +1,4 @@
 interface:
   display_name: "Mac 合盖不休眠"
   short_description: "安装、检查和稳定化 Mac 合盖保活，支持 AI Agent 长任务与安全恢复"
-  default_prompt: "使用 $mac-lid-awake 把这台 Mac 配置并验收到合盖后稳定运行：检查唯一状态所有者，必要时安装或迁移工具，验证系统状态、供电切换、持续稳定性和真实合盖结果。"
+  default_prompt: "使用 $mac-lid-awake 只读检查这台 Mac 的合盖保活状态；如需修复或安装，先说明影响并等我确认。"

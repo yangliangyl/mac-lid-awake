@@ -48,7 +48,7 @@ Apple Silicon 必须安装官方 Power Protect；Intel Mac 仅在 Amphetamine �
 2. 允许显示器休眠，避免合盖保活等同于屏幕常亮。
 3. 启用 Closed-Display Mode。若安装 Power Protect 前已有合盖会话，先结束/禁用，再重新开始/启用。
 4. 遇到警告或脚本失败弹窗时读取其内容，不盲点；系统授权交给用户。
-5. 运行 `lid_awake.py ensure`，必须得到 `SleepDisabled=1` 的两次读数。
+5. 用户已确认本次安装和电池/插电影响后，运行 `lid_awake.py ensure --owner amphetamine --confirm-repair --allow-start-session --allow-pmset`，必须得到 `SleepDisabled=1` 的两次读数。脚本会重新核对唯一所有者和受限 Power Protect 权限，不因文件存在而直接写入。
 
 Amphetamine 勾选、`cdmEnabled=1`、普通 `PreventUserIdleSystemSleep` 都不是系统级验收。
 

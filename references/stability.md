@@ -15,7 +15,7 @@
 
 ## 方案顺序
 
-1. **保留 Amphetamine，增强核验**：适合偶发使用。使用现有 `ensure`，每次供电或电源设置变化后检查。重复漂移时不再宣称稳定。
+1. **保留 Amphetamine，增强核验**：适合偶发使用。向用户说明影响并确认后，使用带显式所有者与所需 `--allow-*` 参数的 `ensure`；每次供电或电源设置变化后先只读检查。重复漂移时不再宣称稳定。
 2. **迁移到单一原生工具**：用户希望菜单栏方案且不愿维护守护脚本时，优先评估已签名、公证并使用受限特权助手的实现。当前候选优先看 [Amped](https://github.com/gustaferiksson/amped)；安装前重新核对最新发布、签名、权限范围和维护状态。迁移时先关闭 Amphetamine Closed-Display Mode 并验证 `SleepDisabled=0`，再启用新工具，避免双重所有权。
 3. **任务感知保活**：用户只想在 Agent 工作时保活，可评估 [Adrafinil](https://github.com/kageroumado/adrafinil)。Hook 会修改 Agent 配置，安装前必须展示涉及的 Codex/Claude/Cursor 文件并获得用户确认。不要仅靠进程名判断任务仍在工作。
 4. **离开电脑/手机远控**：需要热点、网络切换和有期限会话时，可评估 [rucksack](https://github.com/noahnawara/rucksack)。其租约、TTL、故障恢复和网络前置检查是合适模型；项目成熟度低时先审计代码与发布签名，不直接替换生产配置。
